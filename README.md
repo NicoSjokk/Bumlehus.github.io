@@ -1,2 +1,2 @@
-# nico.github.io
-Personal Website
+# Bumlehus vaskeliste
+Enkel statisk vaskeliste
