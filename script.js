@@ -7,16 +7,22 @@ function getWeekNumber() {
     const start = new Date(today.getFullYear(), 0, 1);
     const diff = today - start;
     const oneWeek = 1000 * 60 * 60 * 24 * 7;
-    return Math.floor(diff / oneWeek);
+    return Math.floor(diff / oneWeek) + 1;
 }
 
 // Function to rotate cleaning duties based on week number
 function rotateCleaning() {
     const weekNumber = getWeekNumber();
+
+    // Display the current week number in the title
+    const titleDiv = document.getElementById('title');
+    titleDiv.append(" - Uke " + weekNumber);
+
     let currentIndex = weekNumber % people.length;
     const scheduleDiv = document.getElementById('cleaningSchedule');
     
     scheduleDiv.innerHTML = '';
+
     
     // Display the schedule for this week, assigning both person and room
     for (let i = 0; i < people.length; i++) {
@@ -27,7 +33,9 @@ function rotateCleaning() {
         personDiv.innerText = `${person} - ${room}`;
         scheduleDiv.appendChild(personDiv);
     }
+    
 }
 
 // Call the function to display the cleaning schedule
 rotateCleaning();
+
