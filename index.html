@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bumblehuset Vaskeliste</title>
+    <link rel="icon" href="bFav.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +18,7 @@
             background: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             text-align: center;
         }
         h1 {
@@ -32,7 +34,21 @@
             background: #f8f8f8;
             border: 1px solid #ddd;
             border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
+        .person:hover {
+            transform: scale(1.05);
+            text-decoration: underline;
+            background: #f0f0f0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+            .person {
+                font-size: 16px;
+            }
+}
     </style>
 </head>
 <body>
