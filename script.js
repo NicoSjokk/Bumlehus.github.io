@@ -1,4 +1,4 @@
-const people = ["Daniel", "Nicolai", "Sebastian", "Caleb", "Eyastu"];
+const people = ["Daniel", "Nicolai", "Sebastian", "Caleb", "Eyasu"];
 const rooms = ["Stua", "Kjøkken", "Gangen", "Toalett oppe", "Toalett nede"];
 
 // Function to calculate the current week number
